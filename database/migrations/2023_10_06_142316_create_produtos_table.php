@@ -23,9 +23,6 @@ return new class extends Migration
             $table->string("dimensao", 50)->nullable();
             $table->string("material", 50)->nullable();
             $table->timestamps();
-
-            $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete("cascade");
         });
     }
 
